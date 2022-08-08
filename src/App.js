@@ -17,9 +17,8 @@ function App() {
           <Routes>
             <Route path="/mail" element={<Mail />} />
 
-            <Route path="/" element={null} />
+            <Route path="/" element={<EmailList />} />
           </Routes>
-          <EmailList />
         </div>
       </div>
     </Router>
