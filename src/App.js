@@ -1,7 +1,6 @@
-import { Switch } from "@mui/material";
-
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+
 import Mail from "./Mail";
 import "./App.css";
 import EmailList from "./EmailList";
@@ -15,14 +14,12 @@ function App() {
         <Header />
         <div className="app__body">
           <Sidebar />
-          <Switch>
-            <Route path="/mail">
-              <Mail />
-            </Route>
-            <Route path="/">
-              <EmailList />
-            </Route>
-          </Switch>
+          <Routes>
+            <Route path="/mail" element={<Mail />} />
+
+            <Route path="/" element={null} />
+          </Routes>
+          <EmailList />
         </div>
       </div>
     </Router>
