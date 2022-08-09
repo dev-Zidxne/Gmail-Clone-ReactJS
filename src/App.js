@@ -6,6 +6,7 @@ import "./App.css";
 import EmailList from "./EmailList";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
+import SendMail from "./SendMail";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/" element={<EmailList />} />
           </Routes>
         </div>
+        <SendMail />
       </div>
     </Router>
   );
