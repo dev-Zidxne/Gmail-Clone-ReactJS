@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 export const mailSlice = createSlice({
   name: "mail",
@@ -11,13 +11,13 @@ export const mailSlice = createSlice({
       state.sendMessageIsOpen = true;
     },
 
-    closeSendMessage: (state, action) => {
-      state.sendMessageIsOpen += false;
+    closeSendMessage: (state) => {
+      state.sendMessageIsOpen = false;
     },
   },
 });
 
-export const { increment, decrement, incrementByAmount } = mailSlice.actions;
+export const { openSendMessage, closeSendMessage } = mailSlice.actions;
 
 export const selectSendMesageIsOpen = (state) => state.mail.sendMessageIsOpen;
 
