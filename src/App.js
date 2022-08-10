@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 import Mail from "./Mail";
@@ -8,10 +8,15 @@ import Header from "./Header";
 import Sidebar from "./Sidebar";
 import SendMail from "./SendMail";
 import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { selectSendMesageIsOpen } from "./features/mailSlice";
+import { selectUser } from "./features/userSlice";
+import Login from "./Login";
 
 function App() {
   const sendMessageIsOpen = useSelector(selectSendMesageIsOpen);
+  const user = useSelector(selectUser);
+  const dispatch = useDispatch();
 
   return (
     <Router>
