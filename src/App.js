@@ -15,18 +15,22 @@ function App() {
 
   return (
     <Router>
-      <div className="app">
-        <Header />
-        <div className="app__body">
-          <Sidebar />
-          <Routes>
-            <Route path="/mail" element={<Mail />} />
+      {!user ? (
+        <Login />
+      ) : (
+        <div className="app">
+          <Header />
+          <div className="app__body">
+            <Sidebar />
+            <Routes>
+              <Route path="/mail" element={<Mail />} />
 
-            <Route path="/" element={<EmailList />} />
-          </Routes>
+              <Route path="/" element={<EmailList />} />
+            </Routes>
+          </div>
+          {sendMessageIsOpen && <SendMail />}
         </div>
-        {sendMessageIsOpen && <SendMail />}
-      </div>
+      )}
     </Router>
   );
 }
