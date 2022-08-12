@@ -1,5 +1,6 @@
 import firebase from "firebase/compat/app"; //v9
 import "firebase/compat/auth"; //v9
+import { GoogleAuthProvider } from "firebase/auth";
 import "firebase/compat/firestore"; //v9
 const firebaseConfig = {
   apiKey: "AIzaSyD0wTyr9FnJrBAg8rLJDhz7I-6hIi7Ljso",
