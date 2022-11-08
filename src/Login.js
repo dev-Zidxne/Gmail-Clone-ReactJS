@@ -23,7 +23,7 @@ function Login() {
   return (
     <div className="login">
       <div className="login__container">
-        <img src="https://logosandtypes.com/wp-content/uploads/2020/10/Gmail-old.png"></img>
+        <img src="https://mailmeteor.com/logos/assets/PNG/Gmail_Logo_256px.png"></img>
       </div>
       <Button variant="contained" color="primary" onClick={signIn}>
         Login

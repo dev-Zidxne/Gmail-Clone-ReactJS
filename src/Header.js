@@ -26,7 +26,7 @@ function Header() {
         <IconButton>
           <MenuIcon />
         </IconButton>
-        <img src="https://i.pinimg.com/originals/d7/4e/60/d74e6036cb5b6e80d87b0a3fc77176c0.png"></img>
+        <img src="https://static.dezeen.com/uploads/2020/10/gmail-google-logo-rebrand-workspace-design_dezeen_2364_col_0.jpg"></img>
       </div>
 
       <div className="header__middle">
